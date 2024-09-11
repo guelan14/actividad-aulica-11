@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Ejercicios
+
+    <!--Introduccion-->
+    <script>
+      document.write("Migue <br> 15Años ");
+    </script>
+
+    <!--Variables-->
+    <script>
+      let empleado = "Migue";
+      let sueldo = 1100000;
+      document.write(empleado, sueldo);
+    </script>
+
+    <!-- Entrada de datos por teclado. 
+    <script>
+      let nombre;
+      let email;
+      nombre = prompt("Ingrese su nobmre");
+      edad = prompt("ingrese su edad");
+      document.write(nombre);
+      document.write(edad);
+    </script>-->
+
+    <!---->
+
+    <!-- Versioon mejorada entrada de datos por teclado -->
+    <form onsubmit="event.preventDefault(); mostrarDatos();">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required />
+
+      <label for="email">Correo Electrónico:</label>
+      <input type="email" id="email" name="email" required />
+
+      <input type="submit" value="Enviar" />
+    </form>
+    <div id="resultado"></div>
+
+    <script>
+      function mostrarDatos() {
+        // Obtener los valores ingresados
+        var nombre = document.getElementById("nombre").value;
+        var email = document.getElementById("email").value;
+
+        // Mostrar los datos en el div
+        document.getElementById("resultado").innerHTML =
+          nombre + "<p>Email" + email + "</p>";
+      }
+    </script>
+
+    <!--Estructuras secuenciales de programación.
+    
+     <script>        document.write('EJERCICIO 1 <br>');
+
+      let longitud = prompt("ingrese valor del lado");
+      perimetro = parseInt(perimetro) * 4;
+      document.write(
+        "El primetro del cuadrado de ",
+        longitud,
+        "cm de lado es:",
+        perimetro
+      );
+    </script>
+
+     <script>        document.write('EJERCICIO 2 <br>');
+
+      let valorlado;
+      valorlado = prompt("Ingrese el lado del cuadrado en cm:");
+      let producto = parseInt(valorlado) * 4;
+      document.write("Los lados del cuadrado miden " + valorlado + " cm");
+      document.write("<br>");
+      document.write("El perimetro del cuadrado es " + producto + "cm");
+    </script>
+
+
+    <script>document.write('EJERCICIO 3 <br>');
+      let v1;
+      let v2;
+      let v3;
+      let v4;
+      let suma1;
+      let producto1;
+      v1 = prompt('Ingrese el valor uno: ');
+      v2 = prompt('Ingrese el valor dos: ');
+      v3 = prompt('Ingrese el valor tres: ');
+      v4 = prompt('Ingrese el valor cuatro: ');
+      suma1 = parseInt(v1) + parseInt(v2) + parseInt(v3) + parseInt(v4);
+      producto1 = parseInt(v1) * parseInt(v2) * parseInt(v3) * parseInt(v4);
+      document.write ('El resultado de la suma es: ' + suma1 + '<br>' + 'El resultado de la multiplicación es: '+ producto1 + '<br>');
+      document.write ('<br>');</script>
+
+      <script>        document.write('EJERCICIO 4 <br>');
+
+      let precio, cantidad;
+      precio= prompt("ingrese precio");
+      cantidad=prompt("Ingrese cantidad");
+      costoFinal=parseInt(precio)*parseInt(cantidad);
+      document.write("El comprado deera abona:"+costoFinal );
+      </script>
+
+      <script> 
+        document.write('Estuctura condicionales simples <br>');
+        document.write('EJERCICIO 1 <br>');
+
+        let nota1, nota2, nota3;
+        let promedio;
+
+
+        nota1= parseInt(prompt('Ingrese nota1: '));
+        nota2= parseInt(prompt('Ingrese nota2 '));
+        nota3= parseInt(prompt('Ingrese nota3: '));
+
+
+        promedio = (nota1 + nota2 + nota3)/3;
+        if (promedio >= 7) {document.write('Promocionado');}
+    
+    
+      </script>  
+
+    <script>
+        document.write('Estuctura condicionales compuestas <br>');
+        let valor1 = parseInt("Ingrese el primer valor");
+        let valor2 = parseInt("Ingrese el segundo valor");
+
+        if(valor1>valor){
+        let diferencia=valor1-valor2;
+        document.write("La suma de los valores es de :" +suma+"y la diferencia es:" + diferencia);
+    }
+      else
+      {
+      let producto=valor1*valor2;
+      let division=valor1/valor2;
+      document.write("el producto de losvalores es de: "+producto+"y la division del primero con respecto al segundo es de:"+division);
+      }
+    </script> 
+    
+    <script>
+    document.write('Estuctura condicionales anidadas <br>');
+    let num;
+    num = parseInt(prompt('Ingrese el numero a evaluar: '));
+    if (num > 0) {
+    document.write('El número es positivo');}
+    else if (num < 0) {
+    document.write('El número es negativo');
+    }
+    else { 
+    document.write('El número es 0');
+    }
+    </script>
+
+    <script>
+    document.write('Estuctura condicionales condicionales <br>');
+      let valor1, valor2, valor3;
+      valor1=parseInt(prompt("Ingrese el primer valor"));
+      valor2=parseInt(prompt("Ingrese el segundo valor"));
+      valor3=parseInt(prompt("ingrese el tercer valor"));
+
+      if(valor1<10 || valor2 <10 || valor3 <10){
+        document.write("Alguno de los valores es menor a 10");
+      }else{
+        document.write("Ninguno de los valores es menor 10");
+      } 
+    </script>
+
+    <script>
+    document.write('Estucturas switch <br>');
+    let palabra= prompt("Ingresa la palabra");
+    switch(palabra){
+    case 'casa':
+    document.write("house");
+    break;
+    case "mesa":
+    document.write("table");
+    break;
+    case 'gato':
+    document.write('cat');
+    break;
+    default:
+    document.write("no ingreso un valor correcto");
+    break;
+    }
+    </script>
+
+    <script>
+        let serie=11;
+        let x=1;
+        while (x <= 25) {
+            document.write(serie);
+            x = x + 1;
+            serie = serie + 11;
+        }
+    </script>
+
+    
+
+  </body>
+</html>
